@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bildchen::VERSION
   spec.authors       = ["glaszig"]
   spec.email         = ["glaszig@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Find the most likely favicon for a given URL}
+  spec.summary       = %q{Tries to find the most likely favicon for a given URL via HTTP HEAD requests and traversing up the URI path.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
