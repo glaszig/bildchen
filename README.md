@@ -1,6 +1,9 @@
 # Bildchen
 
-Tries to find the most likely favicon for a given URL.
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/glaszig/bildchen/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+Ruby library which tries to find the most likely favicon for a given URL.  
+It does so via HTTP HEAD requests and traversing up the URI path.
 
 ## Installation
 
@@ -14,7 +17,15 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+Cached:
+
+    Bildchen['http://www.example.com/path/to/somewhere']
+
+Uncached:
+
+    bildchen = Bildchen::Resolver.new 'http://www.example.com/path/to/somewhere'
+    bildchen.resolve
+
 
 ## Contributing
 
