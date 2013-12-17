@@ -1,20 +1,16 @@
 # Bildchen
 
-TODO: Write a gem description
+Tries to find the most likely favicon for a given URL.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'bildchen'
+    gem 'bildchen', github: 'glaszig/bildchen'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install bildchen
 
 ## Usage
 
