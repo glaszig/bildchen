@@ -1,6 +1,7 @@
 # Bildchen
 
 [![Build Status](https://travis-ci.org/glaszig/bildchen.png?branch=master)](https://travis-ci.org/glaszig/bildchen)
+[![Coverage Status](https://coveralls.io/repos/glaszig/bildchen/badge.png)](https://coveralls.io/r/glaszig/bildchen)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/glaszig/bildchen/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Ruby library which tries to find the most likely favicon for a given URL.  
