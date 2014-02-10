@@ -28,6 +28,11 @@ Uncached:
     bildchen = Bildchen::Resolver.new 'http://www.example.com/path/to/somewhere'
     bildchen.resolve
 
+### Configuration
+
+HTTP timeouts default to 5 seconds and can be tuned as follows
+
+    Bildchen.timeout = 10
 
 ## Contributing
 
