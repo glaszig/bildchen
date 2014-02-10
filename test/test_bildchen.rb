@@ -7,7 +7,7 @@ class TestBildchen < MiniTest::Unit::TestCase
   end
 
   def test_caching
-    expected = URI("#{EXAMPLE_COM}/favicon.gif")
+    expected = EXAMPLE_COM
     assert_equal expected, Bildchen[EXAMPLE_COM]
 
     result = Bildchen.instance_variable_get :@registry

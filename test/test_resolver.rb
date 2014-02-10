@@ -24,12 +24,12 @@ class ResolverTest < MiniTest::Unit::TestCase
 
   def test_candidates
     expected = [
-      URI('http://www.example.com/path/favicon.gif'),
-      URI('http://www.example.com/path/favicon.ico'),
-      URI('http://www.example.com/path/favicon.png'),
-      URI('http://www.example.com/path/favicon.svg')
+      '/path/to/favicon.ico',
+      '/path/to/favicon.png',
+      '/path/to/favicon.gif',
+      '/path/to/favicon.svg'
     ]
-    result = @resolver.send(:candidates)
+    result = @resolver.send(:candidates, '/path/to/foo')
     assert_equal expected, result
   end
 
