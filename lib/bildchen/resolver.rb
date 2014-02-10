@@ -30,7 +30,7 @@ module Bildchen
 
     # HEAD-requests a file
     def downloadable? path, options = {}
-      (200..399).include? http(options).head(path, 'User-Agent' => USER_AGENT).code.to_i
+      (200..299).include? http(options).head(path, 'User-Agent' => USER_AGENT).code.to_i
     end
 
     # Interpolates path with '%{favicon}' and returns candidates to probe
