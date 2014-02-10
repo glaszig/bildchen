@@ -1,17 +1,14 @@
 require 'helper'
+require 'net/http'
 
 class TestBildchen < MiniTest::Unit::TestCase
 
-  def setup
-    stub_request(:any, /example.com/)
-  end
-
   def test_caching
-    expected = EXAMPLE_COM
-    assert_equal expected, Bildchen[EXAMPLE_COM]
+    expected = LOCALHOST + 'favicon.png'
+    assert_equal expected, Bildchen[LOCALHOST]
 
     result = Bildchen.instance_variable_get :@registry
-    expected = { EXAMPLE_COM => expected }
+    expected = { LOCALHOST => expected }
     assert_equal expected, result
   end
 

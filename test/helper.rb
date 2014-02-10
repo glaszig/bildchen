@@ -10,17 +10,20 @@ SimpleCov.start
 require 'rubygems'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'webmock/minitest'
 require 'pry'
-
+require 'webrick'
+require 'stringio'
 require 'bildchen'
 
-EXAMPLE_COM = 'http://www.example.com/path/to/favicon.ico'
-EXAMPLE_COM_BODY = <<HTML
-<html>
-<head>
-</head>
-<body>
-</body>
-</html>
-HTML
+LOCALHOST = 'http://localhost:56123/'
+
+webrick = {
+  BindAddress: '127.0.0.1', Port: 56123,
+  AccessLog: [], Logger: WEBrick::Log::new(StringIO.new, 7),
+  DocumentRoot: File.expand_path('../webroot', __FILE__)
+}
+
+server_thread = Thread.new do
+  WEBrick::HTTPServer.new(webrick).start
+end
+sleep 1

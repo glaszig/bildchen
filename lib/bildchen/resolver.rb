@@ -23,7 +23,7 @@ module Bildchen
 
     # Recursively tries to HEAD-request the path
     def _resolve path, options = {}
-      [path, candidates(path)].flatten.detect do |path|
+      candidates(path).detect do |path|
         downloadable? path, options
       end || resolve(File.dirname(path), options)
     end
