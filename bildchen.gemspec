@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["glaszig@gmail.com"]
   spec.description   = %q{Find the most likely favicon for a given URL}
   spec.summary       = %q{Tries to find the most likely favicon for a given URL via HTTP HEAD requests and traversing up the URI path.}
-  spec.homepage      = ""
+  spec.homepage      = "https://www.github.com/glaszig/bildchen"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
