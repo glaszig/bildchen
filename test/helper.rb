@@ -19,7 +19,7 @@ LOCALHOST = 'http://localhost:56123/'
 
 webrick = {
   BindAddress: '127.0.0.1', Port: 56123,
-  AccessLog: [], Logger: WEBrick::Log::new(StringIO.new, 7),
+  # AccessLog: [], Logger: WEBrick::Log::new(StringIO.new, 7),
   DocumentRoot: File.expand_path('../webroot', __FILE__)
 }
 
