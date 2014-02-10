@@ -13,7 +13,7 @@ class ResolverTest < MiniTest::Unit::TestCase
   end
 
   def test_downloadable?
-    assert @resolver.send(:downloadable?, URI(EXAMPLE_COM), timeout: 10)
+    assert @resolver.send(:downloadable?, URI(EXAMPLE_COM).path, timeout: 10)
   end
 
   def test_apply_icon_names
