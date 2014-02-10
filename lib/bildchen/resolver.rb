@@ -46,7 +46,7 @@ module Bildchen
 
     # HTTP client factory
     def http options = {}
-      @conn ||= Net::HTTP.start(uri.host, uri.port).tap do |conn|
+      @conn ||= Net::HTTP.new(uri.host, uri.port).tap do |conn|
         conn.read_timeout = options[:timeout]
         conn.use_ssl = (uri.scheme == 'https')
         conn.verify_mode = self.ssl_verify_mode
