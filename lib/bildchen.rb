@@ -6,6 +6,7 @@ require 'bildchen/resolver'
 
 module Bildchen
 
+  USER_AGENT = "Bildchen v#{VERSION} (github.com/glaszig/bildchen)"
   ICON_NAMES = %w(favicon.ico favicon.png favicon.gif favicon.svg)
 
   def self.[] url
