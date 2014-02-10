@@ -18,7 +18,7 @@ class ResolverTest < MiniTest::Unit::TestCase
   end
 
   def test_downloadable?
-    assert @resolver.send(:downloadable?, URI(@url).path, timeout: 10)
+    assert @resolver.send(:downloadable?, '/favicon.png', timeout: 10)
   end
 
   def test_apply_icon_names

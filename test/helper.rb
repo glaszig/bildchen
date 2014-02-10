@@ -17,9 +17,13 @@ require 'bildchen'
 
 LOCALHOST = 'http://localhost:56123/'
 
+log = StringIO.new
+log.sync = true
+
 webrick = {
   BindAddress: '127.0.0.1', Port: 56123,
-  # AccessLog: [], Logger: WEBrick::Log::new(StringIO.new, 7),
+  AccessLog: [ [ log, WEBrick::AccessLog::COMBINED_LOG_FORMAT ] ],
+  Logger: WEBrick::Log::new(log, 7),
   DocumentRoot: File.expand_path('../webroot', __FILE__)
 }
 
