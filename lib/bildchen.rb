@@ -6,7 +6,7 @@ require 'bildchen/resolver'
 
 module Bildchen
 
-  ICON_NAMES = %w(favicon.ico favicon.png favicon.gif favicon.png favicon.svg)
+  ICON_NAMES = %w(favicon.ico favicon.png favicon.gif favicon.svg)
 
   def self.[] url
     @registry ||= {}
