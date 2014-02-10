@@ -11,10 +11,8 @@ module Bildchen
     end
 
     # Returns the url at which a favicon was supposedly found
-    def resolve options = { timeout: 2 }
+    def resolve options = { timeout: Bildchen.timeout }
       if path = _resolve(uri.path, options)
-        http.finish
-
         dupe = uri.dup
         dupe.path = path
         dupe.to_s
@@ -47,6 +45,7 @@ module Bildchen
     # HTTP client factory
     def http options = {}
       @conn ||= Net::HTTP.new(uri.host, uri.port).tap do |conn|
+        conn.open_timeout = options[:timeout]
         conn.read_timeout = options[:timeout]
         conn.use_ssl = (uri.scheme == 'https')
         conn.verify_mode = self.ssl_verify_mode

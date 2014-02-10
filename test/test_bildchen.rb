@@ -15,4 +15,8 @@ class TestBildchen < MiniTest::Unit::TestCase
     assert_equal expected, result
   end
 
+  def test_default_timeout
+    assert_equal 5, Bildchen.timeout
+  end
+
 end
