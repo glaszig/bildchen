@@ -1,4 +1,4 @@
-require 'helper'
+require 'test_helper'
 require 'uri'
 
 class ResolverTest < MiniTest::Unit::TestCase

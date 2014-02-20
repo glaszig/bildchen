@@ -1,4 +1,4 @@
-require 'helper'
+require 'test_helper'
 require 'net/http'
 
 class TestBildchen < MiniTest::Unit::TestCase
