@@ -3,11 +3,9 @@ module Bildchen
   class Resolver
 
     attr_reader :uri
-    attr_accessor :ssl_verify_mode
 
     def initialize url
       @uri = URI.parse url
-      @ssl_verify_mode = OpenSSL::SSL::VERIFY_NONE
     end
 
     # Returns the url at which a favicon was supposedly found
@@ -46,7 +44,6 @@ module Bildchen
         conn.open_timeout = timeout
         conn.read_timeout = timeout
         conn.use_ssl = (uri.scheme == 'https')
-        conn.verify_mode = self.ssl_verify_mode
       end
     end
 
