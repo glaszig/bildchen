@@ -21,12 +21,6 @@ class ResolverTest < Minitest::Test
     assert @resolver.send(:downloadable?, '/favicon.png', timeout: 10)
   end
 
-  def test_apply_icon_names
-    template = '/path/to/%{favicon}'
-    expected = Bildchen::ICON_NAMES.map { |name| "/path/to/#{name}" }
-    assert_equal expected, @resolver.send(:apply_icon_names, template)
-  end
-
   def test_candidates
     expected = [
       '/path/to/favicon.ico',

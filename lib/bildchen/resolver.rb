@@ -29,11 +29,9 @@ module Bildchen
 
       # Interpolates path with '%{favicon}' and returns candidates to probe
       def candidates path
-        apply_icon_names File.join File.dirname(path), '%{favicon}'
-      end
-
-      def apply_icon_names template
-        ICON_NAMES.map { |name| template % { favicon: name } }
+        ICON_NAMES.map do
+          File.join File.dirname(path), _1
+        end
       end
 
       # HTTP client factory
