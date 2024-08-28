@@ -17,8 +17,6 @@ module Bildchen
 
   def self.[] url
     @registry ||= {}
-    @registry[url] ||= begin
-      Resolver.new(url).resolve
-    end
+    @registry[url] ||= Resolver.new(url).resolve
   end
 end
