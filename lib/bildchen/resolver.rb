@@ -1,7 +1,5 @@
 module Bildchen
-
   class Resolver
-
     attr_reader :uri
 
     def initialize url
@@ -46,7 +44,5 @@ module Bildchen
           conn.use_ssl = (uri.scheme == 'https')
         end
       end
-
   end
-
 end

@@ -5,7 +5,6 @@ require 'bildchen/version'
 require 'bildchen/resolver'
 
 module Bildchen
-
   USER_AGENT = "Bildchen v#{VERSION} (github.com/glaszig/bildchen)"
   ICON_NAMES = %w(favicon.ico favicon.png favicon.gif favicon.svg)
 
@@ -22,5 +21,4 @@ module Bildchen
       Resolver.new(url).resolve
     end
   end
-
 end
