@@ -5,6 +5,5 @@ gemspec
 
 group :test do
   gem 'pry'
-  gem 'coveralls', require: false
   gem 'simplecov', require: false
 end
