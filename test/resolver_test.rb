@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'uri'
 
-class ResolverTest < MiniTest::Unit::TestCase
+class ResolverTest < Minitest::Test
 
   def setup
     @url = LOCALHOST + 'foo/bar'

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'net/http'
 
-class TestBildchen < MiniTest::Unit::TestCase
+class TestBildchen < Minitest::Test
 
   def test_caching
     expected = LOCALHOST + 'favicon.png'

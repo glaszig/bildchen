@@ -25,7 +25,7 @@ webrick = {
   DocumentRoot: File.expand_path('../webroot', __FILE__)
 }
 
-server_thread = Thread.new do
+Thread.new do
   WEBrick::HTTPServer.new(webrick).start
 end
 sleep 1
