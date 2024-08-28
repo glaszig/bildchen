@@ -19,7 +19,7 @@ module Bildchen
       def _resolve path, **options
         candidates(path).detect do |path|
           downloadable? path, **options
-        end || _resolve(File.dirname(path), options)
+        end || _resolve(File.dirname(path), **options)
       end
 
       # HEAD-requests a file
