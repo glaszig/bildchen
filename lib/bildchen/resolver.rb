@@ -13,9 +13,7 @@ module Bildchen
     # Returns the url at which a favicon was supposedly found
     def resolve **options
       if path = _resolve(uri.path, **options)
-        dupe = uri.dup
-        dupe.path = path
-        dupe.to_s
+        uri.merge(path).to_s
       end
     end
 
