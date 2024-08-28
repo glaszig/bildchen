@@ -1,8 +1,6 @@
 # Bildchen
 
-[![Build Status](https://travis-ci.org/glaszig/bildchen.png?branch=master)](https://travis-ci.org/glaszig/bildchen)
-[![Coverage Status](https://coveralls.io/repos/glaszig/bildchen/badge.png)](https://coveralls.io/r/glaszig/bildchen)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/glaszig/bildchen/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://github.com/glaszig/bildchen/actions/workflows/test.yml/badge.svg)](https://github.com/glaszig/bildchen/actions)
 
 Ruby library which tries to find the most likely favicon for a given URL.  
 It does so via HTTP HEAD requests and traversing up the URI path.
